@@ -15,8 +15,8 @@ window.onload = () => {
     })();
     loadingScreen.style.opacity = "0";
     setTimeout(() => {
-      loadingScreen.classList.add("hidden");
       mainContent.classList.remove("hidden");
+      loadingScreen.remove();
     }, 500);
   }, 4000);
 };
