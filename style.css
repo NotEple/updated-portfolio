@@ -21,16 +21,9 @@
 }
 
 html {
+  background: transparent;
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
-  background: transparent;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-    scroll-snap-type: none;
-  }
 }
 
 #tsparticles {
@@ -181,7 +174,7 @@ hr {
 /* ! ABOUT SECTION */
 
 #about {
-  scroll-snap-align: start, center;
+  scroll-snap-align: center;
   width: 1000px;
   height: 100vh;
   margin: 0 auto;
@@ -251,7 +244,7 @@ hr {
 /* ! WORK & SKILLSET */
 
 #work-and-skillset {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   height: 100vh;
   margin: 0 auto;
   display: flex;
