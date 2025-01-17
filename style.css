@@ -21,9 +21,16 @@
 }
 
 html {
-  background: transparent;
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+  }
 }
 
 #tsparticles {
