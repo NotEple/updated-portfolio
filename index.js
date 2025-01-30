@@ -18,5 +18,5 @@ window.onload = () => {
       mainContent.classList.remove("hidden");
       loadingScreen.remove();
     }, 500);
-  }, 4000);
+  }, 3000);
 };

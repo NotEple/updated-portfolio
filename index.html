@@ -68,9 +68,9 @@
       <p>Loading...</p>
     </div>
 
-    <!-- Socials -->
-
     <div id="body" class="hidden">
+      <!-- Socials -->
+
       <nav>
         <div id="nav-top"></div>
         <ul>
@@ -138,12 +138,9 @@
                 In my free time I like to work on my own projects, listen to
                 music and play videogames.
               </p>
-              <p>
-                Current project: Twitch Chatbot built with
-                Electron-vite/React/Tailwind.
-              </p>
+              <p>Current project: Twitch Chatbot/Desktop app for chatbot</p>
               <p>Current music: Nu-metal/Metal</p>
-              <p>Current game: Path of Exile 2.</p>
+              <p>Current game: Path of Exile 2/New World: Aeternum</p>
             </div>
           </div>
           <img
@@ -153,47 +150,103 @@
           />
         </section>
 
-        <!-- Work/Skillset -->
+        <!-- Projects -->
 
-        <section id="work-and-skillset">
-          <h4 id="work-and-skillset-header">Work &amp; Skillset</h4>
-          <div id="work-and-skillet-container">
-            <div id="work">
-              <article>
-                <summary>Wheatherfy</summary>
-                <iframe src="https://weatherfyapp.netlify.app/"></iframe>
-                <div class="work-links">
-                  <a href="https://weatherfyapp.netlify.app/" target="_blank"
-                    >Website</a
-                  >
-                  <a
-                    href="https://github.com/NotEple/Weatherfy/tree/main/Weatherfy"
-                    target="_blank"
-                    >GitHub Repo</a
-                  >
-                </div>
-              </article>
+        <section id="projects">
+          <h4 id="projects-header">Projects</h4>
+          <div id="projects-container">
+            <article>
+              <iframe src="https://weatherfyapp.netlify.app/"></iframe>
+              <div class="project-links">
+                <a href="https://weatherfyapp.netlify.app/" target="_blank"
+                  >Website</a
+                >
+                <a
+                  href="https://github.com/NotEple/Weatherfy/tree/main/Weatherfy"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </article>
 
-              <article>
-                <summary>Conscious Coffee</summary>
-                <iframe src="https://consciouscoffee.netlify.app/"></iframe>
-                <div class="work-links">
-                  <a href="https://weatherfyapp.netlify.app/" target="_blank"
-                    >Website</a
-                  >
-                  <a
-                    href="https://github.com/NotEple/Conscious-Coffee"
-                    target="_blank"
-                    >GitHub Repo</a
-                  >
-                </div>
-              </article>
-            </div>
+            <article>
+              <iframe src="https://consciouscoffee.netlify.app/"></iframe>
+              <div class="project-links">
+                <a href="https://weatherfyapp.netlify.app/" target="_blank"
+                  >Website</a
+                >
+                <a
+                  href="https://github.com/NotEple/Conscious-Coffee"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <article id="E7">
+              <h3>E7 Custom Chat Bot</h3>
+              <p>
+                I've been an avid twitch user for a decade, and chatbots can be
+                fun to have in a chat. It is very limited for now, but I have
+                big plans for it. It is built with
+                <a href="https://github.com/electron-vite" target="_blank"
+                  >Electron-vite</a
+                >, React, Typescript, Tailwind. I really wanted to understand
+                <abbr
+                  title="Electron is a free and open-source software framework developed and maintained by OpenJS Foundation. The framework is designed to create desktop applications using web technologies (mainly HTML, CSS and JavaScript, although other technologies such as front-end frameworks and WebAssembly are possible) that are rendered using a version of the Chromium browser engine and a back end using the Node.js runtime environment."
+                  >Electron</abbr
+                >
+                and how
+                <abbr
+                  title="Inter-Process Communication, is the sharing of data between running processes in a computer system."
+                  >IPC</abbr
+                >
+                works. The idea for creating it in Electron, was to create a
+                desktop app that could utilize web technology. The app is going
+                to have a moderation dashboard/dashboard in general for
+                executing commands and making a websocket that hosts an overlay
+                that can be used in OBS browser source to display alerts and
+                images/gifs.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/NotEple/E7" target="_blank"
+                  >GitHub</a
+                >
+              </div>
+            </article>
           </div>
-          <div id="skillset">
-            <img src="./images/React_Logo_SVG.svg" />
-            <img src="./images/Typescript.svg" />
-            <img src="./images/Tailwind_CSS_Logo.svg" />
+        </section>
+
+        <section id="skillset">
+          <div id="skillset-container">
+            <div id="skillset-about">
+              <h3>Skillset</h3>
+              <p>
+                I've worked with a lot of different tools and libraries. These
+                include: HTML, CSS, JavaScript, Bootstrap, Node.js, Next.js,
+                Tanstack query, Electron, Git. And a tiny bit of C# and Python.
+              </p>
+
+              <p>
+                I've also worked with other tools such as: Figma, AdobeXD,
+                Slack, Jira.
+              </p>
+
+              <p>
+                In my last job @ SyncDNA I developed the interface for a video
+                and music production/editing app using React/TypeScript,
+                TailwindCSS, Electron, Tanstack, Redux toolkit, ShadCn, Git and
+                GitHub. I collaborated closely with three other frontend
+                developers, two designers and two backend developers via Slack
+                and Microsoft Teams. Internally, we used tools such as Jira,
+                Slack and Figma. Sadly I can't show that work due to NDA.
+              </p>
+            </div>
+            <div id="skillset-languages">
+              <img src="./images/React_Logo_SVG.svg" />
+              <img src="./images/Typescript.svg" />
+              <img src="./images/Tailwind_CSS_Logo.svg" />
+            </div>
           </div>
         </section>
       </main>

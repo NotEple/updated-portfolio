@@ -1,7 +1,6 @@
 :root {
   --portfolio-blue: #00eeff;
-  --portfolio-small-gap: 1rem;
-  --portfolio-medium-gap: 1.5rem;
+  --portfolio-gap: 1rem;
   --portfolio-header-font: "Koulen", serif;
   --portfolio-paragraph-font: "Comme", serif;
 }
@@ -51,13 +50,13 @@ nav {
   width: 4px;
   height: 100%;
   background-color: var(--portfolio-blue);
-  margin-bottom: var(--portfolio-small-gap);
+  margin-bottom: var(--portfolio-gap);
 }
 
 ul {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--portfolio-gap);
   align-items: center;
   list-style: none;
 }
@@ -79,7 +78,7 @@ ul {
   width: 4px;
   height: 180px;
   background-color: var(--portfolio-blue);
-  margin-top: var(--portfolio-small-gap);
+  margin-top: var(--portfolio-gap);
 }
 
 main {
@@ -110,14 +109,23 @@ main {
 h1 {
   font-size: 5em;
   letter-spacing: 5px;
-  font-family: "Koulen";
+  font-family: var(--portfolio-header-font);
   text-align: center;
   line-height: 100%;
   padding-bottom: 0.5rem;
 }
 
 h2 {
-  font-family: var(--portfolio-paragraph-font);
+  font-family: var(--portfolio-header-font);
+  font-size: 2em;
+  text-align: center;
+  line-height: 100%;
+  padding-top: 1rem;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-family: var(--portfolio-header-font);
   font-size: 2em;
   text-align: center;
   line-height: 100%;
@@ -197,7 +205,7 @@ hr {
 #about-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--portfolio-gap);
   color: white;
   height: 500px;
   background-color: #111111;
@@ -209,7 +217,7 @@ hr {
 #about-greet-container {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: var(--portfolio-gap);
 }
 
 #about-greet-container:nth-child(2) {
@@ -228,7 +236,7 @@ hr {
 #about-info-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--portfolio-gap);
   font-family: var(--portfolio-paragraph-font);
   font-size: large;
   width: 500px;
@@ -238,12 +246,12 @@ hr {
   width: 500px;
   height: 500px;
   border-radius: 0 5% 5% 0%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 /* ! WORK & SKILLSET */
 
-#work-and-skillset {
+#projects {
   scroll-snap-align: center;
   height: 100vh;
   display: flex;
@@ -252,18 +260,21 @@ hr {
   animation: appear 1s linear forwards, fade 1s linear forwards;
   animation-timeline: view();
   animation-range: entry 0, exit 0%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
-#work-and-skillset-header {
+#projects-header {
   font-family: var(--portfolio-header-font);
   color: white;
-
   font-size: 3rem;
   letter-spacing: 5px;
   height: 70px;
 }
 
-#work-and-skillet-container {
+#projects-container {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -284,43 +295,72 @@ iframe {
   display: block;
 }
 
-#work {
+#projects-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--portfolio-gap);
   width: 100%;
 }
 
-.work-links {
-  background-color: var(--portfolio-blue);
+.project-links {
+  background-color: #111111;
   color: white;
   list-style: none;
   text-decoration: none;
   padding: 0.5rem;
-  gap: 1rem;
+  gap: var(--portfolio-gap);
   display: flex;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 0.5rem 0.5rem;
+  margin-top: auto;
 }
 
-.work-links > a {
+.project-links > a {
   font-size: medium;
   font-weight: bold;
-  font-family: var(--portfolio-header-font);
+  font-family: var(--portfolio-paragraph-font);
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #010101;
+  color: var(--portfolio-blue);
   text-decoration: none;
   transition: 0.2s ease-out;
-  border: 2px solid;
+  border: 2px solid transparent;
   padding: 4px 8px 4px 8px;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
-.work-links > a:hover {
-  color: var(--portfolio-blue);
+.project-links > a:hover {
   transition: 0.2s ease-in;
-  border: 2px solid transparent;
-  background-color: black;
+  border: 2px solid var(--portfolio-blue);
+}
+
+#E7 {
+  background-color: #111111;
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+#E7 h3 {
+  letter-spacing: 5px;
+}
+
+#E7 p {
+  font-family: var(--portfolio-paragraph-font);
+  font-size: larger;
+  color: white;
+  padding: 1rem;
+  line-height: 2rem;
+}
+
+#E7 > p > a:first-of-type {
+  color: inherit;
+  text-decoration: underline var(--portfolio-blue);
+}
+#E7 > p > a:first-of-type:hover {
+  color: var(--portfolio-blue);
+}
+
+#E7 abbr {
+  text-decoration: underline dotted var(--portfolio-blue);
 }
 
 /* ! SKILLSET */
@@ -328,12 +368,55 @@ iframe {
 #skillset {
   display: flex;
   flex-direction: row;
-  justify-content: space-;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  scroll-snap-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
-#skillset > img {
-  width: 10%;
+#skillset-container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--portfolio-gap);
+  color: white;
+  height: 500px;
+  max-width: 1000px;
+  background-color: #111111;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+#skillset-container h3 {
+  font-size: 3em;
+  letter-spacing: 5px;
+}
+
+#skillset-about {
+  width: 50%;
+  font-family: var(--portfolio-paragraph-font);
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#skillset-languages {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 50%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: var(--portfolio-gap);
+}
+
+#skillset-languages > img {
+  width: 40%;
+  height: 40%;
 }
 
 /* ! ANIMATIONS */
@@ -408,6 +491,50 @@ iframe {
   }
   to {
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #projects {
+    height: 100%;
+    scroll-snap-align: none;
+  }
+
+  #projects-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #projects-container > article {
+    height: fit-content;
+  }
+
+  #projects-container > iframe {
+    height: 300px;
+  }
+
+  .project-links {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #skillset-container {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #skillset-about {
+    width: 100%;
+  }
+
+  #skillset-languages {
+    width: 100%;
+  }
+
+  #skillset-languages > img {
+    width: 30%;
   }
 }
 
